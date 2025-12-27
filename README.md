@@ -110,15 +110,6 @@ echo -e "tesla.com\nuber.com\nmeta.com" | crtmon -target - -notify=both
 
 <br>
 
-<h6>Telegram Setup</h6>
-
-```bash
-# run the telegram helper bot to get your chat ID
-cd host/telegrambot && TELEGRAM_BOT_TOKEN=your_token go run main.go
-```
-
-<br>
-
 <h6>TO-DO</h6>
 
 - [ ] **different channels for specific targets capability**

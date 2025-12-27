@@ -1,1 +1,162 @@
- 
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/8c9b1877-5803-4c2a-a4ce-f22d5c1a2445" alt="ceye" width="500">
+</div>
+
+
+<br>
+<br>
+<br>
+
+
+> [!NOTE]
+> **crtmon is a minimal tool for monitoring certificate transparency logs without any hassle.**
+
+<br>
+
+- <sub> **detects new subdomains for your targets in realtime** </sub>
+- <sub> **discord & telegram notifications** </sub>
+- <sub> **smart batching with rate limiting** </sub>
+- <sub> **stdin and file support for multiple targets** </sub>
+
+<br>
+<br>
+
+<h4>Installation</h4>
+
+```bash
+go install github.com/coffinxp/crtmon@latest
+```
+
+<br>
+
+<h6>setup configuration</h6>
+
+```bash
+# create config directory and provider template
+crtmon
+```
+
+- <sub>**edit the generated config file at `~/.config/crtmon/provider.yaml`**</sub>
+
+<div align="center">
+  <img width="800" height="800" alt="image" src="https://github.com/user-attachments/assets/0e73cc08-46ec-4aa7-9da0-cf8e5fa0cf68" />
+</div>
+
+<br>
+<br>
+
+<h4>Flags</h4>
+
+<pre>
+  -target    : target domain, file path, or '-' for stdin
+  -config    : path to configuration file (default: ~/.config/crtmon/provider.yaml)
+  -notify    : notification provider: discord, telegram, both
+  -version   : show version
+  -update    : update to latest version
+  -h, -help  : show help message
+</pre>
+
+<div align="center">
+  <!-- <img alt="help" src="https://github.com/user-attachments/assets/957f6a89-08e2-4943-b0de-cf7296997ec6" /> -->
+  <img alt="help" src="https://github.com/user-attachments/assets/a2302e5a-9024-48f7-935c-2e8465dd6aa0" />
+</div>
+
+
+<br>
+<br>
+
+<h4>Example Commands</h4>
+
+```bash
+# monitor github.com for new subdomains
+crtmon -target github.com
+
+# monitor multiple targets from config file
+crtmon # config: ~/.config/crtmon/provider.yaml
+```
+
+<br>
+
+```bash
+# monitor multiple targets via file
+crtmon -target targets.txt
+
+# pipe targets from stdin
+cat domains.txt | crtmon -target -
+
+# monitor specific targets with telegram notifications
+crtmon -target github.com -notify=telegram
+```
+
+<br>
+
+```bash
+# setup cron job to start crtmon on system reboot
+echo "@reboot nohup crtmon -target github.com > /tmp/crtmon.log 2>&1 &" | crontab -
+```
+
+<br>
+
+```bash
+# multiple program targets with dual notifications
+echo -e "tesla.com\nuber.com\nmeta.com" | crtmon -target - -notify=both
+```
+
+<br>
+
+<!-- ```bash
+# integrate with active recon workflows: monitor while scanning
+crtmon -target github.com &
+MONITOR_PID=$!
+subfinder -d github.com -all | httpx -silent -mc 200
+kill $MONITOR_PID
+``` -->
+
+<br>
+
+<!-- ```bash
+# multi-channel monitoring: separate configs for different use cases
+crtmon -config ~/.config/crtmon/critical.yaml -notify=discord &
+crtmon -config ~/.config/crtmon/bugbounty.yaml -notify=telegram &
+crtmon -config ~/.config/crtmon/personal.yaml -notify=both &
+``` -->
+
+<br>
+<br>
+
+- **If you see no results or errors**
+  - <sub> **verify your targets and notification configuration** </sub>
+  - <sub> **check your internet connection** </sub>
+  - <sub> **ensure docker is installed and running** </sub>
+  - <sub> **use `-h` for guidance** </sub>
+
+<br>
+
+<h6>Telegram Setup</h6>
+
+```bash
+# run the telegram helper bot to get your chat ID
+cd host/telegrambot && TELEGRAM_BOT_TOKEN=your_token go run main.go
+```
+
+<br>
+
+<h6>TO-DO</h6>
+
+- [ ] **different channels for specific targets capability**
+
+<br>
+
+> [!CAUTION]
+> **never use `crtmon` for any illegal activites, we are not responsible for your deeds with it. Do for justice.**
+
+<br>
+<br>
+<br>
+
+<h6 align="center">kindly for hackers</h6>
+
+<div align="center">
+  <a href="https://github.com/1hehaq"><img src="https://img.icons8.com/material-outlined/20/808080/github.png" alt="GitHub"></a>
+  <a href="https://twitter.com/1hehaq"><img src="https://img.icons8.com/material-outlined/20/808080/twitter.png" alt="X"></a>
+</div></content>

@@ -3,7 +3,7 @@
   <img src="https://github.com/user-attachments/assets/39d6e99e-8281-4f48-811b-14478f25be99" alt="crtmon" width="600">
 </p>
 
-> **crtmon** is a lightweight tool for monitoring Certificate Transparency logs and detecting new subdomains in real time.
+**crtmon** is a lightweight Certificate Transparency monitoring tool that discovers new subdomains in real time as soon as they appear.
 
 ---
 

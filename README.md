@@ -1,4 +1,3 @@
-
 <p align="center">
   <img src="https://github.com/user-attachments/assets/39d6e99e-8281-4f48-811b-14478f25be99" alt="crtmon" width="600">
   <img width="500" height="200" alt="credit" src="https://github.com/user-attachments/assets/23cc637e-0294-4eef-bc8e-ba8515b6f689" />
@@ -47,7 +46,7 @@ Edit the generated file:
 ```
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/183cb7ab-6e52-40c8-9362-118bf97a0c84" alt="provider config" width="800">
+  <img src="https://github.com/user-attachments/assets/183cb7ab-6e52-40c8-9362-118bf97a0c84" alt="provider" width="800">
 </p>
 
 </br>
@@ -65,7 +64,7 @@ Edit the generated file:
 ```
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/1209cd79-b52d-4aef-84c6-bccfc4fa3837" alt="help output" width="1000">
+  <img src="https://github.com/user-attachments/assets/52534768-1934-4f94-9a7b-95ca2b70980f" alt="help" width="1000">
 </p>
 
 </br>

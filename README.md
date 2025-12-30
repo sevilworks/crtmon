@@ -1,7 +1,3 @@
-> [!WARNING]
-> **The tool is currently not working on some operating systems. We are working on a fix, and it should be updated by the end of the day. Sorry for the inconvenience.**
-
-
 <p align="center">
   <img src="https://github.com/user-attachments/assets/39d6e99e-8281-4f48-811b-14478f25be99" alt="crtmon" width="600">
   <img width="500" height="200" alt="credit" src="https://github.com/user-attachments/assets/23cc637e-0294-4eef-bc8e-ba8515b6f689" />
